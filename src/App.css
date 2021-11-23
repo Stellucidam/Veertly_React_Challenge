@@ -39,8 +39,8 @@
   z-index: 999px;
 }
 
-.App-link {
-  color: #61dafb;
+link {
+  color: #5cdb94;
 }
 
 @keyframes App-logo-spin {
@@ -63,3 +63,12 @@
 .PageButton {
   background-color: #1c4762;
 }
+
+label {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 0.5%;
+  color: #1c4762
+}
+

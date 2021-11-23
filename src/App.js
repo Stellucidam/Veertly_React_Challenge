@@ -45,6 +45,11 @@ class App extends React.Component {
     }
   }
 
+  handleLimitChange(event) {
+    console.log(event.target.value);
+    this.setState({limit: event.target.value}, () => this.renderParticipants());
+  }
+
   handleClick(i) {
     this.selectedParticipant = i;
     this.setState({selectedParticipant: i});
@@ -77,6 +82,13 @@ class App extends React.Component {
             </div>
           </body>
           <footer className="App-footer">
+            <div className="LimitChanger">
+              <label>
+                <input min="1" max="50" type="number" value={this.state.limit} onChange={(value) => this.handleLimitChange(value)} />
+                 Names per page
+              </label>
+            </div>
+
             <div className="ButtonGroup">
                 <ButtonGroup aria-label="Basic example">
                   <Button
